@@ -1,5 +1,4 @@
 *.pyc
-rwsp.egg-info
 vhost
 dist
 build

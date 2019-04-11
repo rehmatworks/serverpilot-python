@@ -1,7 +1,5 @@
 # ServerPilot Python Package
-A Python package to interact with [ServerPilot API](https://serverpilot.io/docs/how-to-use-the-serverpilot-api).
-
-ServerPilot is an awesome tool to manage Ubuntu servers in order to run PHP (and other) web apps flawlessly.
+ServerPilot is an awesome tool to manage Ubuntu servers in order to run PHP (and other) web apps flawlessly. This is a Python package to interact with [ServerPilot API](https://serverpilot.io/docs/how-to-use-the-serverpilot-api).
 
 ## Installation
 Install from PyPi:

@@ -231,4 +231,4 @@ Some of the most common errors you may encounter during utilizing this library a
 * `Exception: 404 Error: Not Found` is thrown when you attempt to access a non-existent resource
 * `Exception: 400 Error: Bad Request` is thrown generally when form parameters are invalid
 
-This package covers all API operations supported by ServerPilot API. If you have any confusions on required parameters or something else, you should check the [API documentation of ServerPilot](https://github.com/ServerPilot/API).
+This package covers all API operations supported by ServerPilot. If you have any confusions on required parameters or something else, you should check the [API documentation of ServerPilot](https://github.com/ServerPilot/API).

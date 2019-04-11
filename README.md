@@ -4,7 +4,7 @@ ServerPilot is an awesome tool to manage Ubuntu servers in order to run PHP (and
 ## Installation
 Install from PyPi:
 ```shell
-pip install serverpilot
+pip install rwsp
 ```
 or clone this repo and run:
 ```python
@@ -12,7 +12,7 @@ python setup.py install
 ```
 ### Usage
 ```python
-from serverpilot.serverpilot import ServerPilot
+from rwsp.serverpilot import ServerPilot
 # Get API Creds at https://manage.serverpilot.io/account/api
 clientId = '###############'
 apiKey = '##############'

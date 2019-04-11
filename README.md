@@ -12,7 +12,7 @@ python setup.py install
 ```
 ### Usage
 ```python
-from rwsp.serverpilot import ServerPilot
+from serverpilot.serverpilot import ServerPilot
 # Get API Creds at https://manage.serverpilot.io/account/api
 clientId = '###############'
 apiKey = '##############'

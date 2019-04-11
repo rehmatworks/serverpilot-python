@@ -171,7 +171,7 @@ appId = 'ID of the app'
 sp.disable_ssl(appId) # Throws an exception if already disabled
 ```
 
-### Delete App
+#### Delete an App
 ```python
 appId = 'ID of the app'
 sp.delete_app(appId)

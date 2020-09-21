@@ -62,7 +62,7 @@ sp.delete_server(serverId)
 ```
 
 
-# SSH Keys
+## SSH Keys
 #### List SSH Keys
 ```python
 sp.list_sshkeys()

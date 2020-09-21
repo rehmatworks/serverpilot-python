@@ -14,7 +14,8 @@ class ServerPilot:
             'users': 'sysusers',
             'apps': 'apps',
             'databases': 'dbs',
-            'actions': 'actions'
+            'actions': 'actions',
+            'sshkeys': 'sshkeys'
         }
 
     def send_response(self, res, json=True):
@@ -146,3 +147,46 @@ class ServerPilot:
 
     def check_action(self, actionId):
         return self.make_request('{}/{}'.format(self.endpoints.get('actions'), actionId))
+    
+    # List SSH keys
+    def list_sshkeys(self):
+        return self.make_request('{}'.format(self.endpoints.get('sshkeys')))
+    
+    # Add a new key
+    def add_sshkey(self, name, public_key):
+        data = {
+            'name': name,
+            'public_key': public_key
+        }
+        return self.make_request('{}'.format(self.endpoints.get('sshkeys')), requestType='POST', data=data)
+    
+    # Get an SSH key by id
+    def get_sshkey(self, sshkey_id):
+        return self.make_request('{}/{}'.format(self.endpoints.get('sshkeys'), sshkey_id))
+    
+    # Rename an SSH key
+    def rename_sshkey(self, sshkey_id, name):
+        data = {
+            'name': name
+        }
+        return self.make_request('{}/{}'.format(self.endpoints.get('sshkeys'), sshkey_id), requestType='POST', data=data)
+    
+    # Delete an SSK key
+    def delete_sshkey(self, sshkey_id):
+        return self.make_request('{}/{}'.format(self.endpoints.get('sshkeys'), sshkey_id), requestType='DELETE')
+    
+    # Add an SSH key to a user
+    def assign_sshkey(self, sshkey_id, user_id):
+        data = {
+            'sshkey_id': sshkey_id
+        }
+        return self.make_request('{}/{}/sshkeys'.format(self.endpoints.get('users'), user_id), requestType='POST', data=data)
+    
+    # Detach an SSH key from a user
+    def detach_sshkey(self, sshkey_id, user_id):
+        return self.make_request('{}/{}/sshkeys/{}'.format(self.endpoints.get('users'), user_id, sshkey_id), requestType='DELETE')
+    
+    # List SSH keys of a user
+    def list_userkeys(self, user_id):
+        return self.make_request('{}/{}/sshkeys'.format(self.endpoints.get('users'), user_id))
+

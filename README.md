@@ -61,6 +61,61 @@ serverId = 'ID of the server'
 sp.delete_server(serverId)
 ```
 
+
+# SSH Keys
+#### List SSH Keys
+```python
+sp.list_sshkeys()
+```
+
+#### Add an SSH Key
+```python
+name = 'my_ssh_key'
+public_key = 'public_key_data'
+sp.add_sshkey(name, public_key)
+```
+
+#### Get an SSH Key
+```python
+ssh_key_id = 'your-ssh-key-id'
+sp.get_sshkey(ssh_key_id)
+```
+
+#### Rename an SSH Key
+```python
+ssh_key_id = 'your-ssh-key-id'
+new_name = 'my_updated_ssh_key'
+sp.rename_sshkey(ssh_key_id, new_name)
+```
+
+#### Delete an SSH Key
+```python
+ssh_key_id = 'your-ssh-key-id'
+sp.delete_sshkey(ssh_key_id)
+```
+
+#### Assign SSH Key
+This action assigns an SSH key to a system user.
+```python
+sys_user_id = 'system-user-id'
+ssh_key_id = 'your-ssh-key-id'
+sp.assign_sshkey(ssh_key_id, sys_user_id)
+```
+
+#### Detach SSH Key
+This action will detach an SSH key from a system user.
+```python
+sys_user_id = 'system-user-id'
+ssh_key_id = 'your-ssh-key-id'
+sp.detach_sshkey(ssh_key_id, sys_user_id)
+```
+
+#### List User SSH Keys
+```python
+sys_user_id = 'system-user-id'
+sp.list_userkeys(sys_user_id)
+```
+
 ## Users
 #### List Users
 ```python

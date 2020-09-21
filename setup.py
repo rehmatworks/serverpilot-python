@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='rwsp',
-	version='1.0.0',
+	version='1.0.1',
 	description='A Python package to interact with ServerPilot API.',
 	author="Rehmat",
 	author_email="contact@rehmat.works",
